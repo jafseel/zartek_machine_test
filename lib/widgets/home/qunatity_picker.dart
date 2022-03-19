@@ -36,6 +36,8 @@ class _QuantityPickerState extends State<QuantityPicker> {
   Widget build(BuildContext context) {
     if (_currentValue != widget.initValue) {
       _currentValue = widget.initValue;
+    }
+    if (_currentValue != _quantityNotifier._value) {
       _quantityNotifier.reset(newValue: _currentValue);
     }
     return Container(
